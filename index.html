@@ -22,20 +22,20 @@
       margin: 0;
     }
 
-    /* --- Login Screen --- */
-    #loginScreen {
-      position: fixed;
-      inset: 0;
-      background: #fff8f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      z-index: 9999;
-      font-family: 'Amatic SC', cursive;
-    }
+   /* --- Login Screen --- */
+#loginScreen {
+  position: fixed;
+  inset: 0;
+  background: #fff8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  font-family: 'Amatic SC', cursive;
+}
 
-    .login-wrapper {
+.login-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,6 +53,17 @@
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Responsive tweak for phones */
+@media (max-width: 600px) {
+  .login-wrapper {
+    flex-direction: column;   /* stack vertically */
+    gap: 15px;
+  }
+  .side-img {
+    width: 100px;   /* smaller on phone */
+  }
 }
 
     #loginScreen h2 {
@@ -443,3 +454,4 @@
   </script>
 </body>
 </html>
+
